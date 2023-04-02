@@ -1,0 +1,20 @@
+.card {
+  color: black;
+  text-shadow: none;
+  text-decoration: none;
+  transition: 100ms ease-out;
+}
+
+.card:not(.JobCard) {
+  height: 9rem;
+}
+
+.isSmall:not(.JobCard) {
+  height: auto;
+}
+
+.card:hover:not(.JobCard) {
+  scale: 1.03;
+  transition: 100ms ease-in;
+  cursor: pointer;
+}

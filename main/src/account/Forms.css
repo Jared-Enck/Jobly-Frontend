@@ -1,0 +1,16 @@
+.Forms {
+  color: black;
+  text-shadow: none;
+  background-color: rgb(240, 240, 240);
+  border-radius: 5px;
+}
+
+.Forms-row {
+  margin-top: 5rem !important;
+}
+
+.Forms label {
+  font-size: 1.2rem;
+  margin-top: .7rem;
+  padding: 0;
+}

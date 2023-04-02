@@ -1,0 +1,41 @@
+.NavBarLinks {
+  height: 100%;
+}
+
+#nav-list {
+  height: 100%;
+}
+
+.NavBarLinks a {
+  display: grid;
+  padding: 0;
+  height: 100%;
+  align-items: center;
+}
+
+.NavBarLinks a:not(.isSmall) {
+  border-bottom: 5px solid rgba(0, 0, 0, 0);
+  width: 7rem;
+}
+
+.NavBarLinks span {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.NavBarLinks a:not(.active) {
+  color: rgb(149, 149, 149);
+}
+.NavBarLinks .active {
+  color: black;
+  font-weight: bold;
+}
+
+.NavBarLinks .active:not(.isSmall) {
+  border-bottom: 5px solid rgb(32, 19, 224);
+}
+
+.NavBarLinks a:hover {
+  color: black;
+  font-weight: bold;
+}
