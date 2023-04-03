@@ -15,7 +15,7 @@ function Home() {
       {
         currentUser
         ? <h2>
-            Welcome back,
+            Welcome,
             <span className='text-capitalize'>
               {' ' + currentUser.firstName}!
             </span>
