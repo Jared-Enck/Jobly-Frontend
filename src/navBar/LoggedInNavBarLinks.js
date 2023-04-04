@@ -2,33 +2,11 @@ import './NavBarLinks.css'
 import React, { useContext } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import UserContext from '../context/UserContext'
-import useWindowDimensions from '../hooks/useWindowDimensions'
 import FontAwesomeIcon from '../common/FontAwesomeIcon'
 
-function NavBarLinks() {
-  const {currentUser,logout} = useContext(UserContext)
-  const {windowSize} = useWindowDimensions()
+function LoggedInNavBarLinks({isSmallWindow}) {
+  const {logout} = useContext(UserContext)
 
-  const isSmallWindow = windowSize.width < 800
-
-  const anonUserLinks = (
-    <>
-      <li className='nav-item'>
-        <NavLink className='nav-link text-center' to="/login">
-          <span>
-            Login
-          </span>
-        </NavLink>
-      </li>
-      <li className='nav-item'>
-        <NavLink className='nav-link' to="/signup">
-          <span>
-            Sign up
-          </span>
-        </NavLink>
-      </li>
-    </>
-  )
   const loggedInUserLinks = (
     <>
       <li className='nav-item'>
@@ -87,16 +65,11 @@ function NavBarLinks() {
     </>
   )
 
-  const smallOrRegularLinks = 
-    isSmallWindow
-    ? loggedInIconLinks
-    : loggedInUserLinks
-
   return (
     <>
-      {currentUser ? smallOrRegularLinks : anonUserLinks}
+      {isSmallWindow ? loggedInIconLinks : loggedInUserLinks}
     </>
   )
 }
 
-export default NavBarLinks
+export default LoggedInNavBarLinks
